@@ -13,6 +13,8 @@ Project java 11 con gradle
 ./gradlew test
 ```
 
+los tests especificos que pide el enunciado se encuentran en la clase com.inditex.test.TestStatement
+
 **Coverage summary:** test:  73.6%
 
 Enunciado
