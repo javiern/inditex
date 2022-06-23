@@ -1,14 +1,19 @@
 Inditex Test Exercise 
+-------
 
 Project java 11 con gradle
 
-para ejecutar:
-
+**para ejecutar:**
+```
 ./gradlew bootRun
+```
 
-para ejecutar los tests
-
+**para ejecutar los tests:**
+```
 ./gradlew test
+```
+
+**Coverage summary:** test:  73.6%
 
 Enunciado
 -------

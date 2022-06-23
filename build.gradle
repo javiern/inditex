@@ -4,6 +4,8 @@ plugins {
 	id 'org.asciidoctor.convert' version '1.5.8'
 	id 'java'
 	id 'idea'
+	id 'jacoco'
+	id 'com.github.ksoichiro.console.reporter' version '0.6.3'
 }
 
 group = 'com.inditex'
@@ -36,4 +38,11 @@ tasks.named('test') {
 tasks.named('asciidoctor') {
 	inputs.dir snippetsDir
 	dependsOn test
+}
+
+test {
+	finalizedBy jacocoTestReport // report is always generated after tests run
+}
+jacocoTestReport {
+	dependsOn test // tests are required to run before generating the report
 }
