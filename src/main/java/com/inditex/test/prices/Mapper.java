@@ -3,7 +3,7 @@ package com.inditex.test.prices;
 import org.springframework.stereotype.Component;
 
 @Component
-class Mapper {
+public class Mapper {
     public PriceDTO toDto(Price price) {
         PriceDTO dto = new PriceDTO();
 

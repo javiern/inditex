@@ -17,11 +17,15 @@ public class PriceController {
 
     Logger logger = LoggerFactory.getLogger(PriceController.class);
 
-    @Autowired
     PriceService svc;
 
-    @Autowired
     Mapper mapper;
+
+    @Autowired
+    public PriceController(PriceService svc, Mapper mapper) {
+        this.svc = svc;
+        this.mapper = mapper;
+    }
 
     @GetMapping("/price")
     public PriceDTO price(
